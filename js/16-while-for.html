@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <title>Document</title>
+</head>
+
+<!-- Напишите цикл, который предлагает prompt ввести число, большее 100. Если посетитель ввёл другое число – попросить ввести ещё раз, и так далее. Предполагается, что посетитель вводит только числа. -->
+<body>
+  <script>
+    var number;
+
+    do {
+      number = prompt("Введите число, большее 100", "");
+    } while (number <= 100 && number != null);
+  </script>
+</body>
+</html>

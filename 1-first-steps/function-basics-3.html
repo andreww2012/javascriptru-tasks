@@ -1,37 +1,3 @@
-<<<<<<< HEAD:js/22-function-basics.html
-<!DOCTYPE html>
-<html lang="ru">
-<head>
-  <meta charset="utf-8">
-  <title>Document</title>
-</head>
-
-<!-- Напишите функцию pow(x,n), которая возвращает x в степени n.
-В этой задаче функция обязана поддерживать только натуральные значения n.
-Создайте страницу, которая запрашивает x и n, а затем выводит результат pow(x,n). -->
-<body>
-  <script>
-    function pow(x, n) {
-      var res = x;
-
-      for (var i = 1; i < n; i++) {
-        res *= x;
-      }
-      
-      return res;
-    }
-
-    var x = +prompt("Введите x:", "");
-    var n = +prompt("Введите целое n, большее 1:", "");
-    
-    if (!n || n <= 1 || n % 1) {
-      alert("Степень должна быть целой и больше 1");
-    } else {
-      alert(x + "^" + n + " = " + pow(x, n));
-    }
-  </script>
-</body>
-=======
 <!DOCTYPE html>
 <html lang="ru">
 <head>
@@ -64,5 +30,3 @@
     }
   </script>
 </body>
->>>>>>> 6ebc5f1d9e2b6a1623e0f23a481d1b1b826df1a2:1-first-steps/function-basics-3.html
-</html>

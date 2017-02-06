@@ -12,6 +12,8 @@ while (true) {
     if (isNaN(result)) {
       throw new Error("Введите выражение ещё раз, оно некорретно.");
     }
+
+    break;
   } catch (e) {
     alert("Ошибка: " + e.message);
   }

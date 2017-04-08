@@ -14,11 +14,11 @@ function formatDate(date) {
   if (diff < SECOND) {
     return "только что";
   }
-  
+
   if (diff < MINUTE) {
     return Math.floor(diff / SECOND) + " сек. назад";
   }
-  
+
   if (diff < HOUR) {
     return Math.floor(diff / MINUTE) + " мин. назад";
   }

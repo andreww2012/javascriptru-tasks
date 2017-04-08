@@ -2,4 +2,4 @@
 
 function randToMax(max) {
   return Math.random() * max;
-} 
+}

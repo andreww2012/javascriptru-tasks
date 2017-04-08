@@ -8,7 +8,7 @@ var numbers = [], userNumber, userNumberSum = 0;
 
 while(true) {
   userNumber = prompt("Введите очередное число:", "");
-  
+
   if (userNumber == null || userNumber.length == 0 || isNaN(userNumber)) break;
 
   numbers.push(+userNumber);

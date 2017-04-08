@@ -26,7 +26,7 @@ function throttle(f, ms) {
         // Вызываем не функцию, а обёртку, чтобы создать задержку перед следующим запуском:
         // wrapper.apply(...) запустит функцию + сделает задержку
         wrapper.apply(currThis, currArgs);
-        currArgs = currThis = null; 
+        currArgs = currThis = null;
       }
     }, ms);
   };

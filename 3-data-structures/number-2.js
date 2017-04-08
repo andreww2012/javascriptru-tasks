@@ -16,6 +16,6 @@ function getDecimal(num) {
   var decPointPos = numString.indexOf(".");
 
   numString = numString.substring(decPointPos);
-  
+
   return (decPointPos == -1) ? 0 : +numString;
 }

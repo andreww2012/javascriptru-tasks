@@ -31,7 +31,7 @@ coffeeMachine.run();
 // поэтому нужно будет переделать их в защищённые свойства.
 
 function CoffeeMachine(power) {
-  this._waterAmount = 0;  
+  this._waterAmount = 0;
   this._power = power;
 }
 

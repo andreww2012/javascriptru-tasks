@@ -28,6 +28,6 @@ function getMaxSubSum(arr) {
     }
     maxSum = Math.max(maxSum, currSum);
   }
-  
+
   return maxSum;
 }

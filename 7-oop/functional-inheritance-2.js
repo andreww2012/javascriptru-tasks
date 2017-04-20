@@ -1,11 +1,13 @@
 // Когда кофеварку выключают – текущая варка кофе должна останавливаться.
 // Например, следующий код кофе не сварит:
+
 /*
 var coffeeMachine = new CoffeeMachine(10000);
 coffeeMachine.enable();
 coffeeMachine.run();
 coffeeMachine.disable(); // остановит работу, ничего не выведет
 */
+
 // Реализуйте это на основе решения предыдущей задачи.
 
 function Machine(power) {

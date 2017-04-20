@@ -1,4 +1,5 @@
-// Напишите функцию getSecondsToTomorrow() которая возвращает, сколько секунд осталось до завтра.
+// Напишите функцию getSecondsToTomorrow() которая возвращает,
+// сколько секунд осталось до завтра.
 
 function getSecondsToTomorrow() {
   var tomorrow = new Date(date.getFullYear(), date.getMonth(), date.getDate() + 1);

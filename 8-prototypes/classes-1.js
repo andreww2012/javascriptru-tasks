@@ -1,6 +1,7 @@
 // Есть класс CoffeeMachine, заданный в функциональном стиле.
 // Задача: переписать CoffeeMachine в виде класса с использованием прототипа.
 // Исходный код:
+
 /*
 function CoffeeMachine(power) {
   var waterAmount = 0;
@@ -27,6 +28,7 @@ var coffeeMachine = new CoffeeMachine(10000);
 coffeeMachine.setWaterAmount(50);
 coffeeMachine.run();
 */
+
 // P.S. При описании через прототипы локальные переменные недоступны методам,
 // поэтому нужно будет переделать их в защищённые свойства.
 

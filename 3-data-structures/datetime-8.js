@@ -1,4 +1,5 @@
-// Напишите функцию formatDate(date), которая выводит дату date в формате дд.мм.гг:
+// Напишите функцию formatDate(date), которая выводит дату date
+// в формате дд.мм.гг:
 
 function formatDate(date) {
   var day = date.getDate();

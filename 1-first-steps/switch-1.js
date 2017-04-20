@@ -1,5 +1,6 @@
-/*Напишите "if", аналогичный "switch":
+// Напишите "if", аналогичный "switch":
 
+/*
 switch (browser) {
   case 'IE':
     alert( 'О, да у вас IE!' );
@@ -14,7 +15,8 @@ switch (browser) {
 
   default:
     alert( 'Мы надеемся, что и в вашем браузере все ок!' );
-}*/
+}
+*/
 
 if (browser == "IE") {
     alert("О, да у вас IE!")

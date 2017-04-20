@@ -1,4 +1,6 @@
-// Вам попал в руки код объекта User, который хранит имя и фамилию в свойстве this.fullName:
+// Вам попал в руки код объекта User, который хранит имя и фамилию
+// в свойстве this.fullName:
+
 /*
 function User(fullName) {
   this.fullName = fullName;
@@ -6,8 +8,11 @@ function User(fullName) {
 
 var vasya = new User("Василий Попкин");
 */
+
 // Имя и фамилия всегда разделяются пробелом.
-// Сделайте, чтобы были доступны свойства firstName и lastName, причём не только на чтение, но и на запись, вот так:
+// Сделайте, чтобы были доступны свойства firstName и lastName,
+// причём не только на чтение, но и на запись, вот так:
+
 /*
 var vasya = new User("Василий Попкин");
 
@@ -20,7 +25,10 @@ vasya.lastName = 'Сидоров';
 
 alert( vasya.fullName ); // Василий Сидоров
 */
-// Важно: в этой задаче fullName должно остаться свойством, а firstName/lastName – реализованы через get/set. Лишнее дублирование здесь ни к чему.
+
+// Важно: в этой задаче fullName должно остаться свойством, а
+// firstName/lastName – реализованы через get/set.
+// Лишнее дублирование здесь ни к чему.
 
 function User(fullName) {
   this.fullName = fullName;

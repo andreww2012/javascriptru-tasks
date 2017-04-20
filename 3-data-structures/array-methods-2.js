@@ -1,4 +1,5 @@
-// Напишите функцию camelize(str), которая преобразует строки вида «my-short-string» в «myShortString».
+// Напишите функцию camelize(str), которая преобразует строки вида
+// «my-short-string» в «myShortString».
 
 function camelize(str) {
   var words = str.split("-");

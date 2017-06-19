@@ -2,5 +2,5 @@
 // числа между min и max, включая min,max как возможные значения.
 
 function randomInteger(min, max) {
-  return min + Math.floor( Math.random() * (max - min + 1) );
+  return min + Math.floor(Math.random() * (max - min + 1));
 }

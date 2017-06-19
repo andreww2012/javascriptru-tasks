@@ -20,7 +20,6 @@ function benchGetElementsById() {
   }
 }
 
-
 function benchQuerySelectorAll() {
   var elements = document.querySelectorAll("span");
   var length = elements.length;

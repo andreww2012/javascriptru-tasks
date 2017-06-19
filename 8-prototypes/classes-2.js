@@ -26,5 +26,5 @@ var lazy = new Hamster();
 speedy.found("яблоко");
 speedy.found("орех");
 
-alert( speedy.food.length ); // 2
-alert( lazy.food.length ); // 2 (!??)
+alert(speedy.food.length); // 2
+alert(lazy.food.length); // 2 (!??)

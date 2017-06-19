@@ -10,23 +10,20 @@ for (var i = 2; i < N; i++) {
   numbers[i] = true;
 }
 
-
 var currPrime = 2;
 
 do {
-
   for (i = currPrime * currPrime; i < N; i += currPrime) {
     numbers[i] = false;
   }
 
   for (i = currPrime + 1; i < N; i++) {
-    if (numbers[i]) break;
+    if (numbers[i]) {
+      currPrime = i;
+      break;
+    }
   }
-
-  currPrime = i;
-
 } while (currPrime < MAX_NUM);
-
 
 var sum = 0;
 

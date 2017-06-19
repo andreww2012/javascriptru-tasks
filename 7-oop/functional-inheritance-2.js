@@ -43,7 +43,7 @@ function CoffeeMachine(power) {
     }
 
   function onReady() {
-    alert( 'Кофе готово!' );
+    alert("Кофе готово!");
   }
 
   this.run = function() {

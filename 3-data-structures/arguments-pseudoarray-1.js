@@ -2,5 +2,5 @@
 
 function f(x) {
   // выведите 1, если первый аргумент есть, и 0 - если нет
-  console.log( arguments.length ? 1 : 0 );
+  console.log(arguments.length ? 1 : 0);
 }

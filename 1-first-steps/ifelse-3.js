@@ -3,7 +3,6 @@
 var userLogin = prompt("Кто пришёл?", "");
 
 if (userLogin == "Админ") {
-
   var userPassword = prompt("Пароль?", "");
 
   if (userPassword == "Чёрный Властелин") {
@@ -13,7 +12,6 @@ if (userLogin == "Админ") {
   } else {
     alert("Пароль неверен");
   }
-
 } else if (userLogin == null) {
   alert("Вход отменён");
 } else {

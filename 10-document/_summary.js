@@ -213,3 +213,30 @@ parentElem.replaceChild(newElem, elem);
 // * Последние два метода возвращают удалённый узел.
 // * Удаление звена elem без ссылки на родителя (не подд. IE11-):
 elem.remove();
+
+// 12. Мультивставка: insertAdjacentHTML и DocumentFragment:
+// http://learn.javascript.ru/multi-insert
+// * Оптимизация вставки в документ: быстрее создать структуру элементов вне
+// DOM, а не вставлять новые элементы в DOM каждый по отдельности.
+// * Оптимизация добавления множества узлов: операция вида innerHTML += "..."
+// плоха с точки зрения произв-ти (напр., будут перезагружены все картинки).
+// * Метод для вставки произвольного HTML в любое место документа:
+// where: куда вставлять по отн. к эл-ту (before/afterBegin/End).
+elem.insertAdjacentHTML(where, "произвольныйhtml");
+// * Вставка в произвольное место элемента newElem:
+elem.insertAdjacentElement(where, newElem);
+// * Вставка в произвольное место текстового узла:
+elem.insertAdjacentText(where, "text");
+// Последние три метода поддерживаются не всеми версиями Firefox.
+// * Вставку большого числа эл-ов можно пр-ть через объект DocumentFragment
+// У него есть методы appendChild, cloneNode, при вставке фрагмента в DOM
+// вставляется не сам элемент, а его дети.
+var fragment = document.createDocumentFragment();
+fragment.appendChild(node);
+elem.appendChild(fragment);
+// * Новые методы для вставки (nodes – DOM-узлы или строки, в любом кол-ве):
+node.append(...nodes); // Вставляет nodes в конец node
+node.prepend(...nodes); // Вставляет nodes в начало node
+node.after(...nodes); // Вставляет nodes после узла node
+node.before(...nodes); // Вставляет nodes перед узлом node
+node.replaceWith(...nodes); // Вставляет nodes вместо node

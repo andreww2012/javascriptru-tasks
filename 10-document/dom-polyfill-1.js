@@ -6,6 +6,6 @@
 // Создайте полифилл, который гарантирует стандартный синтаксис elem.matches
 // (css) для всех браузеров.
 
-if (!Element.prototype.matches) {
+if (!("matches" in Element.prototype)) {
   Element.prototype.matches = Element.prototype.matchesSelector || Element.prototype.webkitMatchesSelector || Element.prototype.msMatchesSelector || Element.prototype.mozMatchesSelector;
 }

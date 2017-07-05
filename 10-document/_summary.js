@@ -253,7 +253,6 @@ document.writeln("...");
 // пишет в текст страницы до его генерации. Иногда его используют для
 // добавления скриптов с динамическим URL (см. статью).
 
-
 // 14. Стили, getComputedStyle: http://learn.javascript.ru/styles-and-classes
 // * style - объект с CSS св-ми объекта, предост. доступ на чтение и запись:
 elem.style;
@@ -279,3 +278,30 @@ window.getComputedStyle(element, "pseudo?");
 // св-в (margin, padding, border,...) правильный рез-т не гарантируется.
 // Метод не позволяет узнать стиль :visited стилей в целях безопасности.
 // * Метод currentStyle для IE8-: подробнее в статье.
+
+// 15. Размеры и прокрутка элементов: http://learn.javascript.ru/metrics
+// * Метрики - св-ва, содержащие внешние и внутренние размеры элемента в
+// пикселях: http://learn.javascript.ru/article/metrics/metric-all.png
+// * Ссылка на элемент. относительно которого позиционируется текущий:
+elem.offsetParent;
+elem.offsetLeft; // задают смещение относительно
+elem.offsetTop;  // offsetParent: https://vk.cc/6QygCp
+// * Получение "внешней" ширины/высоты эл-та (полный размер, включая border):
+elem.offsetWidth;  // https://vk.cc/6Qylcn
+elem.offsetHeight;
+// * Метрики для display: none эл-ов равны нулю, а offsetParent равен null =>
+function isHidden(elem) { return !elem.offsetWidth && !elem.offsetHeight; }
+// * Отступ внутренней части элемента от внешней (по сути border, но не всегда)
+elem.clientTop;  // https://vk.cc/6QyppH
+elem.clientLeft; // https://vk.cc/6Qyq1j
+// * Размер эл-та внутри рамок border (с учётом padding, но без прокрутки):
+elem.clientWidth;  // https://vk.cc/6Qyu8I
+elem.clientHeight; // https://vk.cc/6QyuSM
+// * Аналоги clientWidth/Height, только добавляют прокрученную область эл-та,
+// которую не видно по горизонтали/вертикали: https://vk.cc/6QyD9m
+elem.scrollWidth;
+elem.scrollHeight;
+// * Ширина/высота невидимой части эл-та слева и сверху: https://vk.cc/6QyEDL
+elem.scrollLeft; // P. S. в отличие от большинства св-в, которые доступны
+elem.scrollTop;  // только для чтения, эти можно изменять.
+// * Почему не стоит брать width/height из CSS описано в статье.

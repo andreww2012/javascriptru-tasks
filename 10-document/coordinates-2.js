@@ -9,27 +9,22 @@ function positionAt(anchor, position, elem) {
   let anchorPos = anchor.getBoundingClientRect();
   let anchorPosX = anchorPos.left;
   let anchorPosY = anchorPos.top;
-  let anchorWidth = anchor.offsetWidth;
-  let anchorHeight = anchor.offsetHeight;
-
   let elemPosX, elemPosY;
-  let elemWidth = elem.offsetWidth;
-  let elemHeight = elem.offsetHeight;
 
   switch (position) {
     case "top":
       elemPosX = anchorPosX;
-      elemPosY = anchorPosY - elemHeight;
+      elemPosY = anchorPosY - elem.offsetHeight;
     break;
 
     case "right":
-      elemPosX = anchorPosX + anchorWidth;
+      elemPosX = anchorPosX + anchor.offsetWidth;
       elemPosY = anchorPosY;
     break;
 
     case "bottom":
       elemPosX = anchorPosX;
-      elemPosY = anchorPosY + anchorHeight;
+      elemPosY = anchorPosY + anchor.offsetHeight;
     break;
   }
 

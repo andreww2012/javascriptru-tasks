@@ -7,14 +7,14 @@
 
 function sortTable(table) {
   let tbody = table.tBodies[0];
-  let rowsAmount = tbody.children.length;
+  let rowsAmount = tbody.rows.length;
 
   table.removeChild(tbody);
 
   let tableData = [];
 
   for (let i = 0; i < rowsAmount; i++) {
-    let elem = tbody.children[i];
+    let elem = tbody.rows[i];
     tableData.push({
       element: elem,
       age: elem.cells[3].innerHTML

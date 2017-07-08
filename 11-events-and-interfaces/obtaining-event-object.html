@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+  <style>
+    /* CSS и HTML взяты из задачи 10-document/metrics-4.html,
+    изменённые участки сопровождены комментариями. */
+    #field {
+      width: 200px;
+      border: 10px groove black;
+      background-color: #00FF00;
+      position: relative;
+      /* Просто меняем курсор */
+      cursor: pointer;
+    }
+
+    #ball {
+      position: absolute;
+      /* Добавим начальные значения позиции */
+      top: 0;
+      left: 0;
+      /* Добавляем анимацию */
+      transition-duration: 500ms;
+      transition-property: top, left;
+      transition-timing-function: ease;
+    }
+  </style>
+
+  <div id="field">
+    <img src="https://js.cx/clipart/ball.svg" id="ball">
+    . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+    . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+    . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+    . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+    . . . . . . . . . . . . . . . . . . . . . . .
+  </div>
+
+  <!-- js-код тут ;) -->
+  <script src="obtaining-event-object.js"></script>
+</body>
+</html>

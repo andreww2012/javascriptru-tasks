@@ -26,5 +26,4 @@ field.onclick = function(event) {
     event.clientX - fieldCoords.left - field.clientLeft - ballWidth / 2,
     field.clientWidth - ballWidth
   )) + "px";
-}
-
+};

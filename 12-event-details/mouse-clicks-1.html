@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <style>
+    .selected {
+      background: #00ff00;
+    }
+
+    li {
+      cursor: pointer;
+    }
+  </style>
+</head>
+
+<body>
+  Клик на элементе выделяет только его.
+  <br> Ctrl(Cmd)+Клик добавляет/убирает элемент из выделенных.
+  <br> Shift+Клик добавляет промежуток от последнего кликнутого к выделению.
+  <br>
+
+  <ul>
+    <li>Кристофер Робин</li>
+    <li>Винни-Пух</li>
+    <li>Ослик Иа</li>
+    <li>Мудрая Сова</li>
+    <li>Кролик. Просто кролик.</li>
+  </ul>
+
+  <script src="mouse-clicks-1.js"></script>
+</body>
+</html>

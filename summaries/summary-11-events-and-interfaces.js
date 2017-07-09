@@ -131,3 +131,30 @@ event.preventDefault();
 // keydown – при нажатии клавиши в поле ввода появляется символ.
 // contextmenu – при правом клике показывается контекстное меню браузера.
 // и т. д. Об особенностях IE8- см. в статье.
+
+// 8. Генерация событий на элементах: http://learn.javascript.ru/dispatch-events
+// * Можно не только назн. обработчики на события, но и генерировать их самому.
+// * Генерация события (event-type - свой или встроенный (напр., click) тип,
+// bubbles - будет ли всплывать, cancelable - можно ли отмен.действие по умолч.)
+let event = new Event("event-type", { bubbles: false, cancelable: false });
+// * Инициация события (возвращает false, если будет вызван preventDefault()):
+elem.dispatchEvent(event);
+// * Способ отличить реальное действие от скриптового(подд. не всеми браузерами)
+event.isTrusted; // true - реальное
+// * Помимо isTrusted, при создании события браузер автом. ставит след. св-ва:
+// target: null, но ставится автоматически при вызове dispatchEvent;
+// type - первый аргумент new Event; bubbles, cancelable - также из new Event.
+// Другие св-ва события можно установить вручную (напр., координаты мыши).
+// * Для некоторых конкретных типов событий есть свои конструкторы:
+// UIEvent, FocusEvent, MouseEvent, WheelEvent, KeyboardEvent и т. д.
+// * Специфический конструктор позволяет указать стандартные свойства для
+// данного типа события, напр., clientX и clientY для события мыши.
+// * Для генерации кастомных событий можно исп. констр. CustomEvent. Отличия от
+// Event: во 2-м аргументе в св-ве detail указывается кастомный объет с данными.
+// * Способ генерации событий для IE11-: 1) Создание события, eventInterface -
+// Event, MouseEvent, FocusEvent, KeyboardEvent и т. д.
+event = document.createEvent("eventInterface");
+// 2) Инициализация события, где 2-й аргумент - bubbles, 3-й - cancelable;
+// для каждого типа события есть свой метод (initMouseEvent, initKeyboardEvent),
+event.initEvent("type", false, false); // который принимает свои параметры.
+// В статье есть информация о IE8- и полифиллах.

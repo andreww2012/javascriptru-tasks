@@ -65,4 +65,4 @@ tree.onclick = function(e) {
   }
 
   node.hidden = !node.hidden;
-}
+};

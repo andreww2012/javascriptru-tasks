@@ -311,7 +311,7 @@ elem.scrollTop;  // только для чтения, эти можно изме
 // метрики, однако на практике есть ряд ньюансов.
 // * Ширина/высота видимой части окна (https://vk.cc/6QXJCT):
 document.documentElement.clientWidth; document.documentElement.clientHeight;
-// * Размер окна браузера (clientWidth/Height-полоса прокрутки, не подд. IE8-):
+// * Размер окна браузера (clientWidth/Height+полоса прокрутки, не подд. IE8-):
 window.innerWidth; window.innerHeight;
 // * Полный размер с учётом прокрутки (в нек. браузерах есть баги с этими св-ми,
 // их описании и пример определ. высоты страницы с учётом прокрутки - в статье):

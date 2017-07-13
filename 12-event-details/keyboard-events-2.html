@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+
+<body>
+  <p>Нажмите <code>Q+W</code>, чтобы сработал <code>alert</code></p>
+  <p>Нажмите <code>D+E+L+T</code>, чтобы удалить страницу :)</p>
+  <script src="keyboard-events-2.js"></script>
+  <script>
+    runOnKeys(
+      () => {
+        alert("Привет!");
+      },
+      "Q".charCodeAt(0),
+      "W".charCodeAt(0)
+    );
+
+    runOnKeys(
+      () => {
+        document.body.innerHTML = "";
+      },
+      "D".charCodeAt(0),
+      "E".charCodeAt(0),
+      "L".charCodeAt(0),
+      "T".charCodeAt(0)
+    );
+  </script>
+</body>
+</html>

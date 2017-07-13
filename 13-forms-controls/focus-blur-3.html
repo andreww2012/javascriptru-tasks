@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <style>
+    #view, #area {
+      height: 150px;
+      width: 400px;
+      font-family: arial;
+      font-size: 14px;
+    }
+
+    #view {
+      padding: 2px;
+      border: 1px solid black;
+    }
+
+    #area {
+      display: none;
+      border: 3px groove blue;
+      padding: 0px;
+    }
+
+    #area:focus {
+      outline: none;
+    }
+  </style>
+</head>
+
+<body>
+  <ul>
+    <li>Ctrl+E для начала редактирования.</li>
+    <li>Во время редактирования: Ctrl+S для сохранения, Esc для отмены.</li>
+  </ul>
+
+  HTML разрешён.
+
+  <textarea id="area"></textarea>
+  <div id="view">Текст</div>
+  <script src="focus-blur-3.js"></script>
+</body>
+</html>

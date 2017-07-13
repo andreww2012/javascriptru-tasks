@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <style>
+    .img-replace {
+      float: left;
+      border: 1px solid black;
+    }
+
+    #google {
+      width: 114px;
+      height: 40px;
+      font-size: 32px;
+      letter-spacing: 3px;
+    }
+
+    #yandex {
+      width: 101px;
+      height: 40px;
+      font-size: 32px;
+    }
+
+    #bing {
+      width: 100px;
+      height: 40px;
+      font-size: 32px;
+      color: #006dd4;
+      font-weight: bold;
+      letter-spacing: 3px;
+      font-family: Arial;
+    }
+  </style>
+</head>
+
+<body>
+  <button onclick="window.location.reload(true)">Перезагрузить</button>
+  <hr>
+
+  <div id="google" data-src="https://js.cx/search/google.png"
+  class="img-replace">
+    <span style="color:#1A53F7">G</span><span style="color:#E42131">o</span><span style="color:#FEB819">o</span><span style="color:#164AF2">g</span><span style="color:#00a315">l</span><span style="color:#E42131">e</span>
+  </div>
+
+  <div id="yandex" data-src="https://js.cx/search/yandex.png"
+  class="img-replace">
+    <span style="color:#F00">Я</span>ндекс
+  </div>
+
+  <div id="bing" data-src="bing.png" class="img-replace">bing</div>
+
+  <script src="onload-onerror-1.js"></script>
+</body>
+</html>

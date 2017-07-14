@@ -4,11 +4,11 @@
 // * window - с одной стороны глобальный объект в Javascript, с другой –
 // содержит свойства и методы для управления окном браузера.
 window.open("http://ya.ru"); // открывает новую вкладку
-// * window: Javascript, DOM, BOM.
-// * Javascript: Object, Array, Function, ...
-// * DOM: document (даёт возм-ть взаимодействовать с содержимым страницы), ...
-// * BOM: navigator, screen, location, frames, history, XMLHttpRequest. Это
-// объекты для работы с чем угодно, кроме документа.
+// - window: Javascript, DOM, BOM:
+// -- Javascript: Object, Array, Function, ...
+// -- DOM: document (даёт возм-ть взаимодействовать с содержимым страницы), ...
+// -- BOM: navigator, screen, location, frames, history, XMLHttpRequest (это
+// объекты для работы с чем угодно, кроме документа).
 
 // 2. Дерево DOM: http://learn.javascript.ru/dom-nodes
 // * DOM-модель – это внутреннее представление HTML-страницы в виде дерева.

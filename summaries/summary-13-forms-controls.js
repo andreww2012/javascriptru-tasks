@@ -50,3 +50,11 @@ elem.oninput;
 // о проблемах onchange/oninput/onpropertychange в старых IE см. в статье.
 // * События cut, copy, paste, но нельзя получить данные кроссбраузерно.
 elem.oncut; elem.oncopy; elem.onpaste;
+
+// 4. Формы: отправка, событие и метод submit:
+// https://learn.javascript.ru/forms-submit
+// * Событие submit происходит при попытке отправки формы на сервер:
+formElement.onsubmit;
+// (!) Нажав enter в поле формы, помимо submit, генерируется событие click.
+// * Чтобы отправить форму, нужно вызвать f.submit() на любом элементе формы:
+formElement.submit(); // (!) onsubmit НЕ будет сгенерировано

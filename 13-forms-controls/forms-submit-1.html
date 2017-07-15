@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <script src="forms-submit-1.js"></script>
+  <style>
+    #prompt {
+      position: fixed;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      z-index: 100;
+      display: none;
+      text-align: center;
+      background: rgba(0, 0, 0, 0.5);
+    }
+
+    #prompt::before {
+      content: "";
+      display: inline-block;
+      height: 100%;
+      vertical-align: middle;
+    }
+
+    #prompt form {
+      display: inline-block;
+      box-sizing: border-box;
+      padding: 5px;
+      vertical-align: middle;
+      width: 300px;
+      text-align: initial;
+      background: #ffffff;
+    }
+  </style>
+</head>
+
+<body>
+  <div id="prompt">
+    <form id="prompt-form">
+      <div id="form-message"></div>
+      <input name="text" type="text"></input><br>
+      <button name="ok" type="submit">OK</button>
+      <button name="cancel" type="button">Отмена</button>
+    </form>
+  </div>
+  <button id="showModal">Показать форму ввода</button>
+
+  <script>
+    showModal.onclick = () => {
+      showPrompt(
+        "Введите что-нибудь<br>... <b>умное</b> :)",
+        function(value) {
+          alert(value);
+        }
+      );
+    };
+  </script>
+</body>
+</html>

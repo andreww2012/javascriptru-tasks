@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <script src="forms-submit-2.js"></script>
+  <style>
+    td select,
+    td input {
+      width: 150px;
+      border: 1px solid black;
+    }
+
+    label {
+      display: block;
+    }
+
+    .error input,
+    .error select,
+    .error textarea {
+      border: 1px solid red;
+    }
+
+    .error {
+      color: red;
+    }
+  </style>
+</head>
+
+<body>
+  <form>
+    <table>
+      <tr>
+        <td>От кого</td>
+        <td>
+          <input name="from" type="text" data-error="Укажите от кого">
+        </td>
+      </tr>
+      <tr>
+        <td>Ваш пароль</td>
+        <td>
+          <input name="password" type="password" data-error="Укажите пароль">
+        </td>
+      </tr>
+      <tr>
+        <td>Повторите пароль</td>
+        <td>
+          <input name="password2" type="password" data-error="Пароли не совпадают">
+        </td>
+      </tr>
+      <tr>
+        <td>Куда</td>
+        <td>
+          <select name="to" data-error="Укажите куда">
+            <option></option>
+            <option value="1">Отдел снабжения</option>
+            <option value="2">Отдел разработки</option>
+            <option value="3">Директору</option>
+          </select>
+        </td>
+      </tr>
+    </table>
+
+    Сообщение:
+    <label>
+      <textarea name="message" style="display:block;width:400px;height:80px"
+      data-error="Отсутствует текст"></textarea>
+    </label>
+
+    <input type="button" onclick="validate(this.form)" value="Проверить">
+  </form>
+</body>
+</html>

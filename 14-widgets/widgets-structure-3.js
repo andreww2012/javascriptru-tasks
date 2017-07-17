@@ -40,18 +40,22 @@ function ListSelect(options) {
     }
 
     if (e.shiftKey && lastClickedElem) {
+      let lastItem;
+
       // target предшествует lastClickedElem?
       if (target.compareDocumentPosition(lastClickedElem) & 4) {
         for (let i = target; i != lastClickedElem; i = i.nextElementSibling) {
           selectItem(i);
+          lastItem = i;
         }
       } else {
         for (let i = target; i != lastClickedElem; i = i.previousElementSibling) {
           selectItem(i);
+          lastItem = i;
         }
       }
 
-      selectItem(i);
+      selectItem(lastItem);
     } else if (e.ctrlKey || e.metaKey) {
       toggleItem(target);
     } else {

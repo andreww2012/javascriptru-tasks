@@ -3,7 +3,6 @@
 function Slider(options) {
   let slider = options.elem;
   let sliderThumb = slider.firstElementChild;
-  console.log(options);
 
   function documentOnMouseMove(e) {
     let sliderCoords = slider.getBoundingClientRect();

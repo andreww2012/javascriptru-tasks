@@ -14,8 +14,6 @@ sliderThumb.ondragstart = () => false;
 sliderThumb.onmousedown = (e) => {
 
   let sliderCoords = slider.getBoundingClientRect();
-  let sliderThumbCoords = sliderThumb.getBoundingClientRect();
-  let shiftX = e.pageX - sliderThumbCoords.left;
 
   document.onmousemove = (e) => {
     sliderThumb.style.left = Math.min(

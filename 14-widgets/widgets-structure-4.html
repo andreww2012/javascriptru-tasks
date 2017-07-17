@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <script src="widgets-structure-4.js"></script>
+  <style>
+    .voter {
+      font-family: Consolas, "Lucida Console", monospace;
+      font-size: 18px;
+    }
+
+    .up,
+    .down {
+      cursor: pointer;
+      color: blue;
+      font-weight: bold;
+    }
+  </style>
+</head>
+
+<body>
+  <div id="voter" class="voter">
+    <span class="down">—</span>
+    <span class="vote">0</span>
+    <span class="up">+</span>
+  </div>
+
+  <script>
+    let voter = new Voter({
+      elem: document.getElementById("voter")
+    });
+    voter.setVote(12);
+  </script>
+</body>
+</html>

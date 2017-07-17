@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+
+<body>
+  <!--
+    Посмотрите на вёрстку горизонтального меню (см. ниже).
+    Что делает эту вёрстку несемантичной? Найдите 3 ошибки (или больше).
+    Как бы вы сверстали меню правильно?
+
+    CSS:
+    .rounded-horizontal-blocks .item {
+      float: left;
+      padding: 6px;
+      margin: 0 2px;
+      border: 1px solid gray;
+      border-radius: 10px;
+      cursor: pointer;
+      font-size: 90%;
+      background: #FFF5EE;
+    }
+
+    .vertical-splitter {
+      float: left;
+      padding: 6px;
+      margin: 0 2px;
+    }
+
+    .item:hover {
+      text-decoration: underline;
+    }
+
+    HTML:
+    <div class="rounded-horizontal-blocks">
+      <div class="item">Главная</div>
+      <div class="vertical-splitter">|</div>
+      <div class="item">Товары</div>
+      <div class="item">Фотографии</div>
+      <div class="item">Контакты</div>
+    </div>
+  -->
+  <!-- Решение: -->
+  <style>
+    .menu__item {
+      display: inline-block;
+      margin: 0 2px;
+      padding: 6px;
+      font-size: 90%;
+      background: #FFF5EE;
+      border: 1px solid gray;
+      border-radius: 10px;
+      list-style: none;
+      cursor: pointer;
+    }
+
+    .menu__item:hover {
+      text-decoration: underline;
+    }
+
+    .menu__vertical-splitter {
+      display: inline-block;
+      list-style: none;
+    }
+
+    .menu__vertical-splitter::before {
+      content: "|";
+    }
+  </style>
+
+  <ul class="menu">
+    <li class="menu__item">Главная</li>
+    <li class="menu__vertical-splitter"></li>
+    <li class="menu__item">Товары</li>
+    <li class="menu__item">Фотографии</li>
+    <li class="menu__item">Контакты</li>
+  </ul>
+</body>
+</html>

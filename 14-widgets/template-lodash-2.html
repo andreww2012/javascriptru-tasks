@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <script src="https://cdn.jsdelivr.net/lodash/4.17.4/lodash.min.js"></script>
+  <script src="template-lodash-2.js"></script>
+  <title>Document</title>
+  <style>
+    .menu ul {
+      display: none;
+      margin: 0;
+    }
+
+    .menu .title {
+      font-weight: bold;
+      cursor: pointer;
+    }
+
+    .menu .title:before {
+      content: '▶';
+      padding-right: 6px;
+      color: green;
+    }
+
+    .menu.open ul {
+      display: block;
+    }
+
+    .menu.open .title:before {
+      content: '▼';
+    }
+  </style>
+</head>
+
+<body>
+  <script type="text/template" id="menu-template">
+    <div class="menu">
+      <span class="title"><%-title%></span>
+    </div>
+  </script>
+  <!-- Единственная часть решения - здесь -->
+  <script type="text/template" id="menu-list-template">
+    <ul>
+      <% for (prop in items) { %>
+      <li><a href="#<%= encodeURIComponent(prop) %>"><%- items[prop] %></a></li>
+      <% } %>
+    </ul>
+  </script>
+
+  <script>
+    // Возьмите в качестве исходного кода меню на шаблонах и модифицируйте его,
+    // чтобы оно выводило не просто список, а список ссылок.
+    // Вместо массива items меню должно принимать объект items (см. ниже).
+    // Вывод в шаблоне пусть будет не просто <li>Пончик</li>, а через ссылку:
+    // <a href="#donut">Пончик</a>. При клике на ссылку должно выводиться
+    // название из её href.
+
+    let menu = new Menu({
+      title: "Сладости",
+      template: _.template(document.getElementById('menu-template').innerHTML),
+      listTemplate: _.template(document.getElementById('menu-list-template').innerHTML),
+      items: {
+        "donut": "Пончик",
+        "cake": "Пирожное",
+        "chocolate": "Шоколадка"
+      }
+      });
+
+      document.body.appendChild(menu.getElem());
+  </script>
+
+</body>
+</html>

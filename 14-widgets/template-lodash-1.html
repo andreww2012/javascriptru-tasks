@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <script src="https://cdn.jsdelivr.net/lodash/4.17.4/lodash.min.js"></script>
+  <title>Document</title>
+  <style>
+    table {
+      border-collapse: collapse;
+    }
+
+    td {
+      padding: 3px 5px;
+      text-align: center;
+      border: 1px solid black;
+    }
+  </style>
+</head>
+
+<body>
+  <script type="text/template" id="users">
+    <table>
+      <thead>
+        <tr>
+          <th>Имя</th>
+          <th>Возраст</th>
+        </tr>
+      </thead>
+
+      <tbody>
+        <% _.forEach(users, function(user) { %>
+        <tr>
+          <td><%- user.name %></td>
+          <td><%- user.age %></td>
+        </tr>
+        <%  }); %>
+      </tbody>
+    </table>
+  </script>
+
+  <script>
+    // Есть данные. Выведите их в виде таблицы TABLE/TR/TD при помощи шаблона.
+
+    const data = [
+      {name: "Вася", age: 10},
+      {name: "Петя", age: 15},
+      {name: "Женя", age: 20},
+      {name: "Маша", age: 25},
+      {name: "Даша", age: 30},
+    ];
+
+    document.write(
+      _.template(document.getElementById("users").innerHTML)({users: data})
+    );
+  </script>
+</body>
+</html>

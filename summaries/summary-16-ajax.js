@@ -11,7 +11,7 @@
 
 // 2. Node.JS для решения задач: https://learn.javascript.ru/ajax-nodejs
 // В статье приводится краткая инструкция по установке/настройке NodeJS/npm
-// и приводится пример создания простого сервера (см. 16-ajax/server-example.js)
+// и приводится пример создания простого сервера (см. example-server.js)
 
 // 3. Основы XMLHttpRequest: https://learn.javascript.ru/ajax-xmlhttprequest
 // * Как правило, объект XMLHttpRequest используют для загрузки данных.
@@ -47,4 +47,4 @@ xhr.getAllResponseHeaders(); // возвр. всё кроме Set-Cookie/..2 в 
 // const ... LOADING = 3;           загруж. тело(получен очередной пакет данных)
 // const ... = 4;                   запрос завершён
 // Запрос проходит их в порядке 0 → 1 → 2 → 3 → … → 3 → 4.
-// См. в xmlhttprequest-example.js пример типичного XMLHttpRequest запроса.
+// См. в example-xmlhttprequest.js пример типичного XMLHttpRequest запроса.

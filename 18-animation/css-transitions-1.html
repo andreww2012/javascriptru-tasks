@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <style>
+    img {
+      width: 40px;
+      height: 24px;
+      transition: all 3s;
+    }
+
+    img.bigger {
+      width: 400px;
+      height: 240px;
+    }
+  </style>
+</head>
+
+<body>
+  <!--
+    Реализуйте анимацию: https://vk.cc/6TMlpt
+    * Изображение растёт при клике с 40x24px до 400x240px .
+    * Продолжительность анимации: 3 секунды.
+    * По окончании вывести «Готово!».
+    * Если в процессе анимации были дополнительные клики – они не должны ничего
+    «сломать».
+  -->
+  <img src="https://js.cx/clipart/flyjet.jpg" id="flyjet">
+
+  <script>
+    let animated = false;
+    let animationEnded = false;
+
+    flyjet.onclick = () => {
+      flyjet.classList.add("bigger");
+    };
+
+    flyjet.ontransitionend = () => {
+      if (animationEnded) {
+        return;
+      }
+
+      animationEnded = true;
+      alert("Готово!");
+    };
+  </script>
+</body>
+</html>
